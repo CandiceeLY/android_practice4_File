@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.luyue.rw.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name:"
+        android:id="@+id/textViewUserName"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignBottom="@+id/editTextUserId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUserName"
+        android:hint="User Name"
+        android:paddingTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textViewUserName"
+        android:layout_toEndOf="@+id/textViewUserName"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User ID:"
+        android:id="@+id/textViewUserID"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:layout_alignBottom="@+id/editTextUserID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUserID"
+        android:hint="User ID"
+        android:paddingTop="42.4dp"
+        android:layout_below="@+id/textViewUserName"
+        android:layout_toRightOf="@+id/textViewUserID"
+        android:layout_toEndOf="@+id/textViewUserID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Sex:"
+        android:id="@+id/textViewUserSex"
+        android:paddingTop="6dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/textViewUserID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="52dp" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroupSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    </RadioGroup>
+
+
+    <!--
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/editTextUserName"
+          android:hint="       User Name"
+          />
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/editTextID"
+          android:hint="User ID"
+          android:inputType="textPassword"
+          android:layout_marginTop="104dp"
+          android:layout_below="@+id/textViewUserId"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true" />
+
+          -->
+
+    <Button
+        android:id="@+id/btnWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存信息"
+
+        android:layout_alignBaseline="@+id/btnRead"
+        android:layout_alignBottom="@+id/btnRead"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="读取查看"
+
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/textViewUserSex"
+        android:layout_toRightOf="@+id/btnWrite"
+        android:layout_toEndOf="@+id/btnWrite" />
+
+
+    <RadioGroup
+        android:id="@+id/rgSex"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/male"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/textViewUserSex"
+        android:layout_toRightOf="@+id/textViewUserSex"
+        android:layout_toEndOf="@+id/textViewUserSex">
+
+    <RadioButton
+        android:id="@+id/radioButtonMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewUserSex"
+        android:layout_alignBottom="@+id/textViewUserSex"
+        android:layout_alignLeft="@+id/editTextUserName"
+        android:layout_alignStart="@+id/editTextUserName"
+        android:onClick="onRadioButtonClicked"
+        android:text="男" />
+
+    <RadioButton
+        android:id="@+id/radioButtonFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClicked"
+        android:text="女"
+        android:layout_alignBaseline="@+id/radioButtonMale"
+        android:layout_alignBottom="@+id/radioButtonMale"
+        android:layout_alignRight="@+id/editTextUserName"
+        android:layout_alignEnd="@+id/editTextUserName" />
+
+    </RadioGroup>
+
+    <!--
+    <Spinner
+        android:id = "@+id/Spinner_city"
+        android:layout_width = "wrap_content"
+        android:layout_height ="wrap_content"
+        android:layout_below="@+id/textViewUserSex"
+        android:layout_alignRight="@+id/editTextUserID"
+        android:layout_alignEnd="@+id/editTextUserID">
+    </Spinner >
+   -->
+</RelativeLayout>
